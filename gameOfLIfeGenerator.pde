@@ -18,8 +18,7 @@ int minimumScale = 10;
 boolean gameState = false;
 
 void setup() {
-  //size(200, 400);
-  fullScreen();
+  size(600, 400);
   
   // find gcd for maximumScale
   int gcd = 0;
@@ -99,7 +98,7 @@ void keyPressed() {
     changeBackgroundColor(color(244, 65, 140));
   }
   
-  if(key == '+') {
+  if(key == '-') {
     do {
       if(scale > minimumScale) {
         scale -= 2;
@@ -111,7 +110,7 @@ void keyPressed() {
     initBoxState();
   }
   
-  if(key == '-') {
+  if(key == '+') {
     do {
       if(scale < maximumScale) {
         scale += 2;
